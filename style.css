@@ -1,0 +1,72 @@
+/* MrOwny's small public site (GitHub Pages): the channel's colours, system fonts only, nothing loaded from elsewhere. */
+:root {
+  --blue: #0b78be;
+  --orange: #f4511e;
+  --ink: #0b0b0b;
+  --text: #1d2733;
+  --muted: #5a6573;
+  --paper: #ffffff;
+  --ground: #f2f6fa;
+  --line: #d9e2ec;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e6edf3;
+    --muted: #a3b0be;
+    --paper: #141b22;
+    --ground: #0d1217;
+    --line: #26323e;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+header {
+  background: var(--blue);
+  color: #fff;
+  padding: 2.5rem 1rem 2rem;
+  text-align: center;
+}
+header img { width: 96px; height: 96px; border-radius: 50%; border: 4px solid #fff; }
+header h1 { margin: 0.5rem 0 0; font-size: 2.2rem; font-weight: 900; letter-spacing: 0.02em; }
+header p { margin: 0.25rem 0 0; font-weight: 600; }
+.pill {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.1rem 0.75rem;
+  font-weight: 800;
+}
+main {
+  max-width: 44rem;
+  margin: -1rem auto 2rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+@media (max-width: 47rem) { main { margin: -1rem 1rem 2rem; } }
+h2 { font-size: 1.25rem; margin: 1.75rem 0 0.5rem; }
+h2:first-child { margin-top: 0; }
+a { color: var(--blue); }
+@media (prefers-color-scheme: dark) { a { color: #5fb4ea; } }
+.links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.date { color: var(--muted); margin-top: 0; }
+footer { text-align: center; color: var(--muted); padding: 0 1rem 2.5rem; font-size: 0.95rem; }
+footer a { color: inherit; }
